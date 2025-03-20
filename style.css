@@ -309,7 +309,7 @@ header {
     display: grid;
     padding-bottom: 1rem;
     border: 1px solid lightgray;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
   }
 
   .news-card-main div>p {
