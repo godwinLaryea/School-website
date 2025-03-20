@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+
+body {
+  --primary-color: #ffff;
+  --secondary-color: #0000;
+  font-family: "Playfair Display", serif;
+  color: #282B3D;
+}
+
+.container {
+  width: min(100%, 1280px);
+  padding-inline: 0.5rem;
+  margin-inline: auto;
+}
+
+header {
+  width: min(100%, 1280px);
+  height: 70px;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  ul>a {
+    color: black;
+    text-decoration: none;
+    display: none;
+  }
+
+  img {
+    padding-right: 0.9rem;
+  }
+}
+
+.welcome-section {
+  margin: 3rem 0 5rem 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+  background: url(./assets/school-image-section.jpg) no-repeat top right/cover;
+  filter: blur(0.02rem);
+  min-height: 55vh;
+
+  .welcome-section-container {
+    min-height: 55vh;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: last baseline;
+    justify-content: flex-end;
+    padding-bottom: 2rem;
+  }
+
+  .welcome-text {
+    background-color: rgba(0, 0, 0, 0.248);
+    padding: 0.4rem;
+    width: 50%;
+  }
+
+  .welcome-text p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .apply-btn {
+    max-width: 40%;
+    cursor: pointer;
+    padding: 0.4em 0.9em;
+    border-radius: 2rem;
+    border: none;
+    background-color: #282B3D;
+  }
+
+  .apply-btn>a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+}
+
+.campus-news-heading {
+  text-align: center;
+  letter-spacing: 0.2rem;
+}
+
+/* Choose US Styling */
+
+.choose-us {
+  background-color: #282B3D;
+  padding: 1rem;
+  margin-bottom: 10rem;
+  width: min(100%, 1440px);
+  min-height: 40vh;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+
+  .choose-us-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: min(500px, 100%);
+    min-height: 40vh;
+  }
+
+  .choose-us-wrapper {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  h1 {
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 1.8rem;
+  }
+
+  .choose-us-text {
+    line-height: 1.4;
+    color: #fff;
+    width: min(100%, 350px);
+    margin-bottom: 1rem;
+  }
+
+  button {
+    max-width: 50%;
+    margin-inline: auto;
+    background-color: #fff;
+    padding: 0.4em 1em;
+    border: 1px solid #282B3D;
+    border-radius: 5rem;
+    cursor: pointer;
+  }
+  button a {
+    color: #282B3D;
+    letter-spacing: 0.05rem;
+  }
+}
+
+/* Popular Courses */
+.courses-heading {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  padding-bottom: 2rem;
+
+}
+
+.popular-courses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-bottom: 10rem;
+  padding: 1.5rem;
+  background-color:#282B3D;
+  min-height: 40vh;
+
+
+
+  .courses-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-bottom: 0.35rem;
+    border: 1px solid rgba(211, 211, 211, 0.166);
+    background-color: #fff;
+    border-radius: 1rem;
+  }
+
+  .course-image img {
+    width: min(100%, 400px);
+    height: 15.625rem;
+    object-fit: cover;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+
+  .heading-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .course-description,
+  .course-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 1px solid white;
+    border-radius: 0.4rem;
+    padding-inline: 0.4em;
+    color: #282B3D;
+  }
+
+  .course-header {
+    padding-inline: 0.4em;
+  }
+
+  .courses-text {
+    width: min(80%, 350px);
+    padding-bottom: 0.35rem;
+    padding-inline: 0.4em;
+  }
+
+  .apply button {
+    margin-inline: 0.4em;
+    padding: 0.4em 1em;
+    border-radius: 4rem;
+    border: 1px solid #282B3D;
+    cursor: pointer;
+  }
+}
+
+
+/* Graduates Styling */
+.graduates-section {
+  background-color: rgba(211, 211, 211, 0.183);
+  margin-bottom: 10rem;
+
+  h1 {
+    font-size: 1.4rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 2rem 0;
+  }
+
+  .graduates-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 1rem;
+  }
+
+
+
+  .graduates-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .graduate-image img {
+    width: min(100%, 250px);
+    height: 15.625rem;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .graduate-texts {
+    max-width: 65%;
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+
+}
+
+
+
+
+/* Campus News Styling */
+
+.campus-news-heading {
+  font-size: 1.4rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+}
+
+.campus-news-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  background-color: rgba(211, 211, 211, 0.253);
+  padding: 1.5rem;
+
+
+  .news-card-main {
+    display: grid;
+    padding-bottom: 1rem;
+    border: 1px solid lightgray;
+    border-radius: 0.5rem;
+  }
+
+  .news-card-main div>p {
+    padding-bottom: 0.35em;
+  }
+
+  .news-card img {
+    width: min(100%, 400px);
+    height: 300px;
+    object-fit: cover;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+
+  .campus-news-info{
+    width: min(100%, 350px);
+    padding-inline: 1.4em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .read-more button {
+    padding: 0.4em 1em;
+    border-radius: 4rem;
+    border: 1px solid #282B3D;
+    cursor: pointer;
+  }
+}
