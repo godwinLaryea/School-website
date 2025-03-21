@@ -1,341 +1,314 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
-  color: black;
+
+:root {
+  --primary-font: "Poppins", serif;
+  --primary-color: #3F3D53;
+  --secondary-color: #fff;
+  --primary-bg-color: rgba(169, 169, 169, 0.183);
 }
 
-
 body {
-  --primary-color: #ffff;
-  --secondary-color: #0000;
-  font-family: "Playfair Display", serif;
-  color: #282B3D;
+  font-size: 1rem;
+}
+
+@media screen and (min-width:768px) {
+  body {
+    font-size: 1.2rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+li {
+  list-style: none;
 }
 
 .container {
+  color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
   width: min(100%, 1280px);
-  padding-inline: 0.5rem;
   margin-inline: auto;
 }
 
 header {
+  background-color: var(--secondary-color);
   width: min(100%, 1280px);
-  height: 70px;
-  background-color: #fff;
   position: fixed;
   top: 0;
   z-index: 100;
-  
+}
 
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 0;
-  }
+nav {
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.4375rem;
+  padding-inline: 0.5rem;
+}
 
-  h1 {
-    font-size: 1.2rem;
-  }
+.nav-logo-link>a {
+  font-weight: bold;
+}
 
+ul {
+  display: none;
+  gap: 2rem;
+}
+
+ul a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
   ul {
-    list-style: none;
+    display: flex;
   }
 
-  ul>a {
-    color: black;
-    text-decoration: none;
+  nav img {
     display: none;
   }
 
-  img {
-    padding-right: 0.9rem;
-  }
 }
 
-.welcome-section {
-  margin: 3rem 0 5rem 0;
-  height: 100%;
+/* Hero Section */
+.section-wrapper {
+  background-color: var(--primary-bg-color);
   display: flex;
   flex-direction: column;
-  padding-bottom: 2rem;
-  background: url(./assets/school-image-section.jpg) no-repeat top right/cover;
-  filter: blur(0.02rem);
-  min-height: 55vh;
-
-  .welcome-section-container {
-    min-height: 55vh;
-    display: flex;
-    gap: 2rem;
-    flex-direction: column;
-    align-items: last baseline;
-    justify-content: flex-end;
-    padding-bottom: 2rem;
-  }
-
-  .welcome-text {
-    background-color: rgba(0, 0, 0, 0.248);
-    padding: 0.4rem;
-    width: 50%;
-  }
-
-  .welcome-text p {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #fff;
-  }
-
-  .apply-btn {
-    max-width: 40%;
-    cursor: pointer;
-    padding: 0.4em 0.9em;
-    border-radius: 2rem;
-    border: none;
-    background-color: #282B3D;
-  }
-
-  .apply-btn>a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-  }
+  width: min(100%, 1280px);
+  margin: 3.44rem 0;
 }
 
-.campus-news-heading {
-  text-align: center;
-  letter-spacing: 0.2rem;
+.hero-section-wrapper {
+  background: url(./assets/school-image-section.webp) no-repeat center/cover;
 }
 
-/* Choose US Styling */
-
-.choose-us {
-  background-color: #282B3D;
-  padding: 1rem;
-  margin-bottom: 10rem;
-  width: min(100%, 1440px);
-  min-height: 40vh;
-  margin-inline: auto;
+.section-content {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  min-height: 35vh;
+}
 
-  .choose-us-info{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: min(500px, 100%);
+@media screen and (min-width: 768px) {
+  .section-content {
     min-height: 40vh;
   }
+}
 
-  .choose-us-wrapper {
-    min-height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+@media screen and (min-width: 980px) {
+  .section-content {
+    min-height: 50vh;
+  }
+}
+
+.hero-section-content {
+  justify-content: end;
+  align-items: last baseline;
+  gap: 0.3rem;
+}
+
+.section-heading {
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  padding: 1.5rem 0;
+}
+
+@media screen and (min-width:768px) {
+  .section-heading {
+    text-align: center;
   }
 
-  h1 {
-    text-transform: capitalize;
-    color: #fff;
-    font-size: 1.8rem;
+}
+
+
+.section-text {
+  color: black;
+  line-height: 1.4;
+  width: min(70%, 700px);
+}
+
+.hero-text {
+  backdrop-filter: blur(0.1rem);
+}
+
+@media screen and (min-width: 768px) {
+  .hero-text {
+    backdrop-filter: blur(1.5rem);
+    border-radius: 0.5rem;
+    padding-inline: 0.5rem;
+    width: min(70%, 450px);
+  }
+}
+
+
+.welcome-heading {
+  color: var(--secondary-color);
+  font-weight: bold;
+  text-align: left;
+}
+
+.school-name {
+  color: #A3B3C2;
+}
+
+@media screen and (min-width:768px) {
+  .welcome-heading {
+    font-size: 2rem;
+  }
+}
+
+.description {
+  color: var(--secondary-color);
+}
+
+.btns {
+  font-size: 1.1rem;
+  border-radius: 100px;
+  border: none;
+  box-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.174);
+  margin-bottom: 0.5rem;
+}
+
+.apply-btn {
+  background-color: #002855;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.082);
+  margin-bottom: 0.5rem;
+  padding: 0.3em 0.8em;
+}
+
+.apply-btn>a {
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.apply-btn>a:hover {
+  text-decoration: underline;
+}
+
+
+/* Why Choose Us */
+
+.choose-us-section-content {
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.choose-us-section-content>h2 {
+  text-align: left;
+}
+
+@media screen and (min-width:768px) {
+  .choose-us-section-content {
+    padding: 0;
+  }
+}
+
+.choose-us-section-content>h2 {
+  width: min(70%, 700px);
+}
+
+@media screen and (min-width: 768px) {
+  .choose-us-section-content>h2 {
+    font-size: 1.6rem;
+    text-align: center;
   }
 
   .choose-us-text {
-    line-height: 1.4;
-    color: #fff;
-    width: min(100%, 350px);
-    margin-bottom: 1rem;
+    font-size: 1.35rem;
   }
 
-  button {
-    max-width: 50%;
-    margin-inline: auto;
-    background-color: #fff;
-    padding: 0.4em 1em;
-    border: 1px solid #282B3D;
-    border-radius: 5rem;
-    cursor: pointer;
-  }
-  button a {
-    color: #282B3D;
-    letter-spacing: 0.05rem;
-  }
 }
+
+.btn-wrapper {
+  width: min(70%, 700px);
+}
+
+.choose-us-btns {
+  cursor: pointer;
+  padding: 0.8rem 1.6rem;
+}
+
+
+.learn-more .btns>a {
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .learn-more .btns>a {
+    font-size: 1.35rem;
+  }
+
+}
+
 
 /* Popular Courses */
-.courses-heading {
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  padding-bottom: 2rem;
-
-}
-
-.popular-courses {
+.courses-section-content,
+.graduate-section-content,
+.campus-news-section-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
-  margin-bottom: 10rem;
-  padding: 1.5rem;
-  background-color:#282B3D;
-  min-height: 40vh;
-
-
-
-  .courses-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding-bottom: 0.35rem;
-    border: 1px solid rgba(211, 211, 211, 0.166);
-    background-color: #fff;
-    border-radius: 1rem;
-  }
-
-  .course-image img {
-    width: min(100%, 400px);
-    height: 15.625rem;
-    object-fit: cover;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-  }
-
-  .heading-price {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .course-description,
-  .course-price {
-    font-size: 1.2rem;
-    font-weight: bold;
-    border: 1px solid white;
-    border-radius: 0.4rem;
-    padding-inline: 0.4em;
-    color: #282B3D;
-  }
-
-  .course-header {
-    padding-inline: 0.4em;
-  }
-
-  .courses-text {
-    width: min(80%, 350px);
-    padding-bottom: 0.35rem;
-    padding-inline: 0.4em;
-  }
-
-  .apply button {
-    margin-inline: 0.4em;
-    padding: 0.4em 1em;
-    border-radius: 4rem;
-    border: 1px solid #282B3D;
-    cursor: pointer;
-  }
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 0 0 3rem 0;
 }
 
-
-/* Graduates Styling */
-.graduates-section {
-  background-color: rgba(211, 211, 211, 0.183);
-  margin-bottom: 10rem;
-
-  h1 {
-    font-size: 1.4rem;
-    text-align: center;
-    text-transform: uppercase;
-    padding: 2rem 0;
-  }
-
-  .graduates-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    padding: 1rem;
-  }
-
-
-
-  .graduates-flex {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-
-  .graduate-image img {
-    width: min(100%, 250px);
-    height: 15.625rem;
-    object-fit: cover;
-    border-radius: 50%;
-  }
-
-  .graduate-texts {
-    max-width: 65%;
-    padding-bottom: 1rem;
-    text-align: center;
-  }
-
+.course-content-info,
+.graduate-content-info,
+.campus-news-card {
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
 }
 
+.course-image img,
+.graduate-image img,
+.news-card-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
 
+.popular-course-data,
+.graduate-data,
+.campus-news-data {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding-inline: 0.4rem;
+}
 
+.heading-price {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+}
 
-/* Campus News Styling */
+.course-apply-btn,
+.read-more-btn {
+  box-shadow: 0.05rem 0.05rem 0.1rem rgba(0, 0, 0, 0.375);
+  padding: 0.4em 1.3em;
+}
 
-.campus-news-heading {
-  font-size: 1.4rem;
+/* Graduate section */
+.graduate-name {
   text-align: center;
-  text-transform: uppercase;
-  padding-bottom: 2rem;
-}
-
-.campus-news-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
-  background-color: rgba(211, 211, 211, 0.253);
-  padding: 1.5rem;
-
-
-  .news-card-main {
-    display: grid;
-    padding-bottom: 1rem;
-    border: 1px solid lightgray;
-    border-radius: 1rem;
-  }
-
-  .news-card-main div>p {
-    padding-bottom: 0.35em;
-  }
-
-  .news-card img {
-    width: min(100%, 400px);
-    height: 300px;
-    object-fit: cover;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-  }
-
-  .campus-news-info{
-    width: min(100%, 350px);
-    padding-inline: 1.4em;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .read-more button {
-    padding: 0.4em 1em;
-    border-radius: 4rem;
-    border: 1px solid #282B3D;
-    cursor: pointer;
-  }
+  padding-bottom: 0.5rem;
 }
